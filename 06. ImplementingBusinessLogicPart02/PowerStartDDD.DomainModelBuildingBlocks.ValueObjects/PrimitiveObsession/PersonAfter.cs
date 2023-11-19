@@ -1,30 +1,18 @@
 ﻿namespace PowerStartDDD.DomainModelBuildingBlocks.ValueObjects.PrimitiveObsession
 {
-    public class PersonAfter
+    public class PersonAfter(Id id, Name name, Email email, NationalCode code)
     {
-        public PersonAfter(Id id, string firstName, string lastName, string email, string nationalCode)
-        {
-            Id = id;
-            FirstName = firstName;
-            LastName = lastName;
-            Email = email;
-            NationalCode = nationalCode;
-        }
+        public Id Id { get; private set; } = id;
+        public Name Name { get; private set; } = name;
+        public Email Email { get; private set; } = email;
+        public NationalCode NationalCode { get; private set; } = code;
+    }
+    public class Name(string firstName,string lastName)
+    {
+        public string FirstName { get; private set; } = firstName;
+        public string LastName { get; private set; } = lastName;
+    }
 
-        public Id Id { get; private set; } 
-        public string FirstName { get; private set; } 
-        public string LastName { get; private set; }
-        public string Email { get; private set; } 
-        public string NationalCode { get; private set; } 
-    }
-    public class FirstName(string name)
-    {
-        public string Value { get; private set; } = name;
-    }
-    public class LastName(string lastName)
-    {
-        public string Value { get; private set; } = lastName;
-    }
     public class Email(string email)
     {
         public string Value { get; private set; } = email;
