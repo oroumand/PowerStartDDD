@@ -1,4 +1,5 @@
-﻿using _06._ImplementingBusinessLogicPart02.DomainModedl.ValueObjects.Colors;
+﻿using _06._ImplementingBusinessLogicPart02.DomainModedl.EntitySamples;
+using _06._ImplementingBusinessLogicPart02.DomainModedl.ValueObjects.Colors;
 using _06._ImplementingBusinessLogicPart02.DomainModedl.ValueObjects.Person;
 
 
@@ -25,3 +26,17 @@ else
 
 //Person person = new(new PersonId("00000000"),
 //    new FullName("Alireza", "Oroumand"), new Email("ar.oroumand@gmail.com"));
+
+
+PersonEntity Me = new PersonEntity
+{
+    Id = 1,
+    FirtsName ="Alireza",
+    LastName = "Oroumand"
+};
+PersonEntity PesarAmoo = new PersonEntity
+{
+    Id = 1,
+    FirtsName = "Hassan",
+    LastName = "Oroumand"
+};
