@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <RootNamespace>_04.PortAndAdapterSamples.API</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\01.PortAndAdapterSamples.Domain\01.PortAndAdapterSamples.Domain.csproj" />
+    <ProjectReference Include="..\02.PortAndAdapterSamples.ApplicaitonServices\02.PortAndAdapterSamples.ApplicaitonServices.csproj" />
+    <ProjectReference Include="..\03.PortAndAdapterSamples.DAL\03.PortAndAdapterSamples.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>_02.PortAndAdapterSamples.ApplicaitonServices</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\01.PortAndAdapterSamples.Domain\01.PortAndAdapterSamples.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

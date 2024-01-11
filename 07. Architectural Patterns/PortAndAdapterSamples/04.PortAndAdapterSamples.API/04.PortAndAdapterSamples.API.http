@@ -1,0 +1,6 @@
+@_04.PortAndAdapterSamples.API_HostAddress = http://localhost:5181
+
+GET {{_04.PortAndAdapterSamples.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
