@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\3.Infra\Data\DddZamin.Infra.Data.Sql.Queries\DddZamin.Infra.Data.Sql.Queries.csproj" />
+    <ProjectReference Include="..\..\..\1.Core\MiniBlog.Core.Contracts\MiniBlog.Core.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
