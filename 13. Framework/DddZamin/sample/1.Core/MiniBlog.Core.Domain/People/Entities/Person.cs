@@ -25,5 +25,11 @@ namespace MiniBlog.Core.Domain.People.Entities
             AddEvent(new PersonCreated(id, BusinessId.Value, firatName, lastName));
 
         }
+
+        public void ChangeFirstName(string firstName)
+        {
+            FirstName = firstName;
+            AddEvent(new PersonNameChanged(Id, firstName));
+        }
     }
 }
