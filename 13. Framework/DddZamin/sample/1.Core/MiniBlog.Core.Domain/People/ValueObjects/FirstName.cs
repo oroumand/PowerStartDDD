@@ -1,7 +1,7 @@
 ﻿using DddZamin.Core.Domain.Exceptions;
 using DddZamin.Core.Domain.ValueObjects;
 using MiniBlog.Core.Domain.Resources;
-
+using DDDZamin.Utilities.Extensions;
 namespace MiniBlog.Core.Domain.People.ValueObjects
 {
     public class FirstName : BaseValueObject<FirstName>
@@ -15,7 +15,7 @@ namespace MiniBlog.Core.Domain.People.ValueObjects
             {
                 throw new InvalidValueObjectStateException(MessagePatterns.EmptyStringValidationMessage, nameof(FirstName));
             }
-            if (value.Length < 2 || value.Length > 50)
+            if (value.IsLengthBetween(2,50))
             {
                 throw new InvalidValueObjectStateException(MessagePatterns.StringLenghtValidationMessage, nameof(FirstName), "2", "50");
 
