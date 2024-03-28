@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBlog.Infra.Data.Sql.Que
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBlog.Endpoints.API", "sample\3.Endpoints\MiniBlog.Endpoints.API\MiniBlog.Endpoints.API.csproj", "{FF3F0455-6067-4E30-91E2-52552BD1F353}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DddZamin.Core.Domain.Toolkits", "src\2.Core\DddZamin.Core.Domain.Toolkits\DddZamin.Core.Domain.Toolkits.csproj", "{C1C03262-80E7-4098-9733-AE08F40A7670}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{FF3F0455-6067-4E30-91E2-52552BD1F353}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF3F0455-6067-4E30-91E2-52552BD1F353}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF3F0455-6067-4E30-91E2-52552BD1F353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C03262-80E7-4098-9733-AE08F40A7670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C03262-80E7-4098-9733-AE08F40A7670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C03262-80E7-4098-9733-AE08F40A7670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C03262-80E7-4098-9733-AE08F40A7670}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -159,6 +165,7 @@ Global
 		{4576342F-75DA-4740-8571-CA2A7DD38179} = {635C3B89-1094-4F5F-99AB-280060E87395}
 		{CF9E4862-7178-490A-9BC9-9F5D4E5BAF23} = {635C3B89-1094-4F5F-99AB-280060E87395}
 		{FF3F0455-6067-4E30-91E2-52552BD1F353} = {AFB0D017-9B67-4101-80A3-AC9D307FB94B}
+		{C1C03262-80E7-4098-9733-AE08F40A7670} = {43FA32D1-E7EF-421A-906D-13FEBDBEA886}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6DD270A4-BE93-4DAC-9EC1-EA4E50C75233}
