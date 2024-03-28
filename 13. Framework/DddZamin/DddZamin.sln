@@ -3,9 +3,42 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2F162C02-1352-432E-813C-3B16E133016A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C188A259-3E4C-4E60-B630-E9DB6CBDCF16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{6BA10150-444F-4360-84EA-3FDBE3C21964}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Utilities", "1.Utilities", "{E21AF7DA-7577-4445-9AD6-C783B9F64188}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Core", "2.Core", "{43FA32D1-E7EF-421A-906D-13FEBDBEA886}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Infra", "3.Infra", "{159B4306-0C39-4DB1-A393-F073316329A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.EndPoints", "4.EndPoints", "{372D87F1-F8CE-4810-900D-136E46A09A60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDZamin.Utilities", "src\1.Utilities\DDDZamin.Utilities\DDDZamin.Utilities.csproj", "{6F0C7FDB-A4B2-405D-B03D-FEFA9F5456CC}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F0C7FDB-A4B2-405D-B03D-FEFA9F5456CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0C7FDB-A4B2-405D-B03D-FEFA9F5456CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0C7FDB-A4B2-405D-B03D-FEFA9F5456CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0C7FDB-A4B2-405D-B03D-FEFA9F5456CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E21AF7DA-7577-4445-9AD6-C783B9F64188} = {2F162C02-1352-432E-813C-3B16E133016A}
+		{43FA32D1-E7EF-421A-906D-13FEBDBEA886} = {2F162C02-1352-432E-813C-3B16E133016A}
+		{159B4306-0C39-4DB1-A393-F073316329A2} = {2F162C02-1352-432E-813C-3B16E133016A}
+		{372D87F1-F8CE-4810-900D-136E46A09A60} = {2F162C02-1352-432E-813C-3B16E133016A}
+		{6F0C7FDB-A4B2-405D-B03D-FEFA9F5456CC} = {E21AF7DA-7577-4445-9AD6-C783B9F64188}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6DD270A4-BE93-4DAC-9EC1-EA4E50C75233}
