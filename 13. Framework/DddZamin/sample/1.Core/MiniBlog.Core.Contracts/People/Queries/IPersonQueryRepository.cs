@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MiniBlog.Core.Contracts.People.Queries
 {
-    internal interface IPersonQueryRepository:IQueryRepository
+    public interface IPersonQueryRepository:IQueryRepository
     {
     }
 }
