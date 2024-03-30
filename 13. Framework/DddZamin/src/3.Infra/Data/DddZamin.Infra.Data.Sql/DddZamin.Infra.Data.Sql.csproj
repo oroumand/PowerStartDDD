@@ -1,9 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
+		<PackageReference Include="Zamin.Extensions.ChangeDataLog.Abstractions" Version="8.0.0" />
+		<PackageReference Include="Zamin.Extensions.UsersManagement.Abstractions" Version="8.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\2.Core\DddZamin.Core.Contracts\DddZamin.Core.Contracts.csproj" />
+		<ProjectReference Include="..\..\..\2.Core\DddZamin.Core.Domain.Toolkits\DddZamin.Core.Domain.Toolkits.csproj" />
+		<ProjectReference Include="..\..\..\2.Core\DddZamin.Core.Domain\DddZamin.Core.Domain.csproj" />
+	</ItemGroup>
 
 </Project>

@@ -5,8 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
+		<PackageReference Include="Zamin.Extensions.Serializers.Abstractions" Version="8.0.0" />
+	</ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\1.Utilities\DDDZamin.Utilities\DDDZamin.Utilities.csproj" />
     <ProjectReference Include="..\..\..\2.Core\DddZamin.Core.Contracts\DddZamin.Core.Contracts.csproj" />
     <ProjectReference Include="..\..\..\2.Core\DddZamin.Core.Domain\DddZamin.Core.Domain.csproj" />
     <ProjectReference Include="..\DddZamin.Infra.Data.Sql\DddZamin.Infra.Data.Sql.csproj" />
