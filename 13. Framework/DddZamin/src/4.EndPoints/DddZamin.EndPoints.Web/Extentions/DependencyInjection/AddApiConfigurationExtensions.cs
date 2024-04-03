@@ -1,5 +1,8 @@
-﻿using FluentValidation.AspNetCore;
+﻿using DddZamin.EndPoints.Web.Middlewares.ApiExceptionHandler;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,28 +20,28 @@ public static class AddApiConfigurationExtensions
             return services;
         }
 
-        //public static void UseZaminApiExceptionHandler(this IApplicationBuilder app)
-        //{
+    public static void UseZaminApiExceptionHandler(this IApplicationBuilder app)
+    {
 
-        //    app.UseApiExceptionHandler(options =>
-        //    {
-        //        options.AddResponseDetails = (context, ex, error) =>
-        //        {
-        //            if (ex.GetType().Name == typeof(Microsoft.Data.SqlClient.SqlException).Name)
-        //            {
-        //                error.Detail = "Exception was a database exception!";
-        //            }
-        //        };
-        //        options.DetermineLogLevel = ex =>
-        //        {
-        //            if (ex.Message.StartsWith("cannot open database", StringComparison.InvariantCultureIgnoreCase) ||
-        //                ex.Message.StartsWith("a network-related", StringComparison.InvariantCultureIgnoreCase))
-        //            {
-        //                return LogLevel.Critical;
-        //            }
-        //            return LogLevel.Error;
-        //        };
-        //    });
+        app.UseApiExceptionHandler(options =>
+        {
+            options.AddResponseDetails = (context, ex, error) =>
+            {
+                if (ex.GetType().Name == typeof(Microsoft.Data.SqlClient.SqlException).Name)
+                {
+                    error.Detail = "Exception was a database exception!";
+                }
+            };
+            options.DetermineLogLevel = ex =>
+            {
+                if (ex.Message.StartsWith("cannot open database", StringComparison.InvariantCultureIgnoreCase) ||
+                    ex.Message.StartsWith("a network-related", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return LogLevel.Critical;
+                }
+                return LogLevel.Error;
+            };
+        });
 
-        //}
     }
+}

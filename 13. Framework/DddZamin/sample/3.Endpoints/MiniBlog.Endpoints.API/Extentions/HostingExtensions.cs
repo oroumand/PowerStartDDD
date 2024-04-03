@@ -11,6 +11,8 @@ using DddZamin.EndPoints.Web.Extentions.DependencyInjection;
 using MiniBlog.Infra.Data.Sql.Commands;
 using MiniBlog.Endpoints.API.Extentions.Swaggers;
 using Zamin.Extensions.DependencyInjection;
+using DddZamin.EndPoints.Web.Extentions.ModelBinding;
+using DddZamin.EndPoints.Web.Middlewares.ApiExceptionHandler;
 namespace MiniBlog.Endpoints.API.Extentions
 {
     public static class HostingExtensions
@@ -35,7 +37,7 @@ namespace MiniBlog.Endpoints.API.Extentions
             //builder.Services.AddSoftwarePartDetector(configuration, "SoftwarePart");
 
             //zamin
-            //builder.Services.AddNonValidatingValidator();
+            builder.Services.AddNonValidatingValidator();
 
             //zamin
              builder.Services.AddZaminMicrosoftSerializer();
@@ -50,8 +52,8 @@ namespace MiniBlog.Endpoints.API.Extentions
             //CommandDbContext
             builder.Services.AddDbContext<MiniblogDbContext>(
                 c => c.UseSqlServer(configuration.GetConnectionString("CommandDb_ConnectionString"))
-                .AddInterceptors(new SetPersianYeKeInterceptor()));
-                                 //new AddAuditDataInterceptor()));
+                .AddInterceptors(new SetPersianYeKeInterceptor(),
+                                 new AddAuditDataInterceptor()));
 
             //QueryDbContext
             builder.Services.AddDbContext<MiniblogQueryDbContext>(
@@ -79,7 +81,7 @@ namespace MiniBlog.Endpoints.API.Extentions
         public static WebApplication ConfigurePipeline(this WebApplication app)
         {
             //zamin
-            //app.UseZaminApiExceptionHandler();
+            app.UseZaminApiExceptionHandler();
 
             //Serilog
             app.UseSerilogRequestLogging();

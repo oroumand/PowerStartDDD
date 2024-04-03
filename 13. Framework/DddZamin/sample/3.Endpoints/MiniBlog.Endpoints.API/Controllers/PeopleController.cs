@@ -1,12 +1,14 @@
+using DddZamin.EndPoints.Web.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using MiniBlog.Core.Domain.People.Entities;
 using MiniBlog.Core.Domain.People.ValueObjects;
+using MiniBlog.Core.RequestResponse.People.Commands.Create;
 
 namespace MiniBlog.Endpoints.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class PeopleController : ControllerBase
+    public class PeopleController : BaseController
     {
         private static readonly string[] Summaries = new[]
         {
@@ -45,19 +47,11 @@ namespace MiniBlog.Endpoints.API.Controllers
           
         }
 
-        [HttpGet("/CreatePerson")]
-        public IActionResult CreatePerson()
+        [HttpPost("/CreatePerson")]
+        public async Task<IActionResult> CreatePerson([FromBody] CreatePerson createPerson)
         {
-            try
-            {
-                Person p = new Person(-1, "Alrieza", "Oroumand");
-                return Ok("Ok");
-            }
-            catch (Exception ex)
-            {
-                return Ok(ex.ToString());
-            }
 
+            return await Create<CreatePerson, int>(createPerson);
 
         }
     }

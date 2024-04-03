@@ -15,7 +15,7 @@ namespace MiniBlog.Core.Domain.People.ValueObjects
             {
                 throw new InvalidValueObjectStateException(MessagePatterns.EmptyStringValidationMessage, nameof(FirstName));
             }
-            if (value.IsLengthBetween(2,50))
+            if (!value.IsLengthBetween(2,50))
             {
                 throw new InvalidValueObjectStateException(MessagePatterns.StringLenghtValidationMessage, nameof(FirstName), "2", "50");
 

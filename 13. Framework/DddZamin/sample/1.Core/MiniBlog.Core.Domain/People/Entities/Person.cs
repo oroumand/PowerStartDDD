@@ -19,10 +19,14 @@ namespace MiniBlog.Core.Domain.People.Entities
             {
                 throw new InvalidEntityStateException(MessagePatterns.IdValidationMessage);
             }
-            Id = id;
+
             FirstName = firatName;
             LastName = lastName;
             AddEvent(new PersonCreated(id, BusinessId.Value, firatName, lastName));
+
+        }
+        private Person()
+        {
 
         }
 
