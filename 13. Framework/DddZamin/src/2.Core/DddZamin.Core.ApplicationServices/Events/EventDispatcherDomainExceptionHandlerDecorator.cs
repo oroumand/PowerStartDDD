@@ -1,14 +1,9 @@
 ﻿using DddZamin.Core.Domain.Exceptions;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Zamin.Extensions.Logger.Abstractions;
 
 namespace DddZamin.Core.ApplicationServices.Events;
-    internal class EventDispatcherDomainExceptionHandlerDecorator : EventDispatcherDecorator
+public class EventDispatcherDomainExceptionHandlerDecorator : EventDispatcherDecorator
 {
     #region Fields
     private readonly ILogger<EventDispatcherDomainExceptionHandlerDecorator> _logger;

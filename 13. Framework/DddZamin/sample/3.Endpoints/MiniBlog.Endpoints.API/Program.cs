@@ -1,25 +1,18 @@
+using MiniBlog.Endpoints.API.Extentions;
+using Zamin.Extensions.DependencyInjection;
+using Zamin.Utilities.SerilogRegistration.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+SerilogExtensions.RunWithSerilogExceptionHandling(() =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
+    var builder = WebApplication.CreateBuilder(args);
+    var app = builder.AddZaminSerilog(o =>
+    {
+        o.ApplicationName = builder.Configuration.GetValue<string>("ApplicationName");
+        o.ServiceId = builder.Configuration.GetValue<string>("ServiceId");
+        o.ServiceName = builder.Configuration.GetValue<string>("ServiceName");
+        o.ServiceVersion = builder.Configuration.GetValue<string>("ServiceVersion");
+    }).ConfigureServices().ConfigurePipeline();
+    app.Run();
+});

@@ -13,11 +13,10 @@ namespace MiniBlog.Endpoints.API.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
 
-        public PeopleController(ILogger<WeatherForecastController> logger)
+        public PeopleController()
         {
-            _logger = logger;
+            
         }
 
         [HttpGet(Name = "GetValueObjectEQ")]

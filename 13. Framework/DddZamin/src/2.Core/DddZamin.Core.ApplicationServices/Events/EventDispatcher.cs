@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 
 namespace DddZamin.Core.ApplicationServices.Events;
-internal class EventDispatcher : IEventDispatcher
+public class EventDispatcher : IEventDispatcher
 {
     #region Fields
     private readonly IServiceProvider _serviceProvider;

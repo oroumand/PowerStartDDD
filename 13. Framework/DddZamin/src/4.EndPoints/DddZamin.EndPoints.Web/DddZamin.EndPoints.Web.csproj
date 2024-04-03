@@ -16,5 +16,14 @@
     <ProjectReference Include="..\..\3.Infra\Data\DddZamin.Infra.Data.Sql.Queries\DddZamin.Infra.Data.Sql.Queries.csproj" />
     <ProjectReference Include="..\..\3.Infra\Data\DddZamin.Infra.Data.Sql\DddZamin.Infra.Data.Sql.csproj" />
   </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Extensions.DependencyModel" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.1" />
+		<PackageReference Include="Scrutor" Version="4.2.2" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0-preview4.23342.2" />
 
+	</ItemGroup>
 </Project>
