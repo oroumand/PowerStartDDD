@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Zamin.Extensions.Events.Outbox.Dal.EF" Version="8.0.0" />
+		<PackageReference Include="Zamin.Infra.Data.Sql.Commands" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\1.Core\JobSearcher.Core.Contracts\JobSearcher.Core.Contracts.csproj" />
+	  <ProjectReference Include="..\..\..\1.Core\JobSearcher.Core.Domain\JobSearcher.Core.Domain.csproj" />
+	</ItemGroup>
+
+</Project>
